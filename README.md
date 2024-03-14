@@ -15,5 +15,7 @@
         - black
         - mypy
     - build: Build the docker image
+    - push: push the image
+    - deploy: deploy the image
 - Add a prometheus client in the project with at least one counter that increment each time we push a specific button
 - Create a deployment file for the app

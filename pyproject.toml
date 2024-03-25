@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "Mlops"
+version = "0.1.0"
+description = "Project description."
+authors = ["CATEZ Benoît"]
+
+[tool.poetry.dependencies] # Direct prod dependencies
+python = ">=3.10,<3.12"
+streamlit = "~1"
+pandas = "~2"
+
+[tool.poetry.dev-dependencies] # Develop dependencies
+coverage = "~7" # Allow to know the part of code covered
+black = "~23" # Code formatting
+isort = "~5" # Import sort
+mypy = "~1" # Type checking
+pytest = "~7" # For unit tests
+vulture = "~2" # Check dead code
+git-cliff = "~1" # Git commit formatting

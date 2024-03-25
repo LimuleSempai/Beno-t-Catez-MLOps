@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: mlops # The name of pods
-        image: docker.io/{USER}/{NAME}:{VERSION} # Docker image that will be pulled and used
+        image: docker.io/limulesempai/mlops:1.0 # Docker image that will be pulled and used
         imagePullPolicy: Always # This tell the deployment if we want to pull image every time a pod is created
         ports:
         - containerPort: 8501 # The port of the app

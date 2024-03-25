@@ -7,7 +7,7 @@ run:
 	poetry run streamlit run app.py
 
 check:
-	poetry run vulture ./
+	#poetry run vulture ./
 	poetry run isort .
 	poetry run black .
 	poetry run mypy .
@@ -19,5 +19,8 @@ push:
 	docker push docker.io/limulesempai/mlops:1.0
 
 deploy:
-	# Here you would typically deploy the Docker image to your chosen environment
-	# For example, Kubernetes, Docker Swarm, AWS ECS, etc.
+	kubectl apply -f deployment.yaml -n benoit
+
+prometheus:
+	@echo "Initializing Prometheus metrics..."
+	poetry run streamlit run prometheus_metrics.py

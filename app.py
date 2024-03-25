@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load data
-@st.cache
+@st.cache_data
 def load_data():
     df = pd.read_csv('housing.csv')
     return df

@@ -5,9 +5,11 @@ description = "Project description."
 authors = ["CATEZ Benoît"]
 
 [tool.poetry.dependencies] # Direct prod dependencies
-python = ">=3.10,<3.12"
+python = ">=3.11,<3.12"
 streamlit = "~1"
 pandas = "~2"
+matplotlib = "~2"
+seaborn = "~0"
 
 [tool.poetry.dev-dependencies] # Develop dependencies
 coverage = "~7" # Allow to know the part of code covered

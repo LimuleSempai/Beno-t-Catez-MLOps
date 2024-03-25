@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mlops-deployment # Tbe deployment name
-  namespace: enzo # The namespace of where the deployment will be done
+  namespace: benoit # The namespace of where the deployment will be done
   labels:
     app: mlops-app # A label to regroup diffent resources
 spec:

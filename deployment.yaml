@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlops-deployment # Tbe deployment name
+  namespace: enzo # The namespace of where the deployment will be done
+  labels:
+    app: mlops-app # A label to regroup diffent resources
+spec:
+  replicas: 1 # Number of pods that will be created 
+  selector:
+    matchLabels:
+      app: mlops-app
+  template:
+    metadata:
+      labels:
+        app: mlops-app
+    spec:
+      containers:
+      - name: mlops # The name of pods
+        image: docker.io/{USER}/{NAME}:{VERSION} # Docker image that will be pulled and used
+        imagePullPolicy: Always # This tell the deployment if we want to pull image every time a pod is created
+        ports:
+        - containerPort: 8501 # The port of the app
+          name: http #
